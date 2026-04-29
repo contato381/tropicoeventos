@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"/Users/igorpadilha/Documents/Projeto VSCode/assets/logo\")",
+      "Bash(cp \"/Users/igorpadilha/Documents/Projeto VSCode/LOGO.png\" \"/Users/igorpadilha/Documents/Projeto VSCode/assets/logo/LOGO.png\")",
+      "Bash(cp \"/Users/igorpadilha/Documents/Projeto VSCode/TrópicoSecundária-Horizontal-Preto.png\" \"/Users/igorpadilha/Documents/Projeto VSCode/assets/logo/logo-horizontal-preto.png\")",
+      "Bash(cp \"/Users/igorpadilha/Documents/Projeto VSCode/TrópicoSecundária-Horizontal-Branco.png\" \"/Users/igorpadilha/Documents/Projeto VSCode/assets/logo/logo-horizontal-branco.png\")"
+    ]
+  }
+}

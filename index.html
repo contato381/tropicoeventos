@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trópico Eventos — Para cruzar a fronteira do óbvio.</title>
+  <meta name="description" content="Produtora de eventos, experiências e audiovisual. Do detalhe que ninguém vê ao momento que ninguém esquece.">
+  <meta property="og:title" content="Trópico Eventos">
+  <meta property="og:description" content="Para cruzar a fronteira do óbvio.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tropicoeventos.com.br">
+  <link rel="canonical" href="https://tropicoeventos.com.br">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <style>
+    /* ─── RESET ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ─── TOKENS ─── */
+    :root {
+      --sand:       #F2F0EB;
+      --charcoal:   #3A3A38;
+      --black:      #1A1A18;
+      --gold:       #8A7F5A;
+      --gold-light: #C4B89A;
+      --body-text:  #6B6B68;
+      --border:     #E0DDD6;
+      --ease:       cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* ─── BASE ─── */
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--black);
+      background: var(--sand);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── LABEL ─── */
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .label::before {
+      content: '';
+      flex-shrink: 0;
+      width: 20px;
+      height: 0.5px;
+      background: currentColor;
+    }
+    .label--light { color: var(--gold-light); }
+
+    /* ─── BUTTON ─── */
+    .btn {
+      display: inline-block;
+      font-family: inherit;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 15px 32px;
+      border: 1px solid var(--black);
+      color: var(--black);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.25s var(--ease), color 0.25s var(--ease);
+    }
+    .btn:hover { background: var(--black); color: var(--sand); }
+    .btn--ghost {
+      border-color: rgba(242,240,235,0.35);
+      color: var(--sand);
+    }
+    .btn--ghost:hover { background: var(--sand); color: var(--black); border-color: var(--sand); }
+
+    /* ─── NAV ─── */
+    .nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
+      height: 72px;
+      padding: 0 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.4s ease, border-bottom 0.4s ease;
+    }
+    .nav.scrolled {
+      background: rgba(242,240,235,0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .nav__logo { width: 148px; height: auto; }
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+    .nav__links a {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--black);
+      position: relative;
+      transition: color 0.2s;
+    }
+    .nav__links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 0.5px;
+      background: var(--gold);
+      transition: width 0.25s var(--ease);
+    }
+    .nav__links a:hover { color: var(--gold); }
+    .nav__links a:hover::after { width: 100%; }
+    .nav__cta {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--black);
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .nav__cta::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; width: 100%; height: 0.5px;
+      background: var(--gold);
+      transform: scaleX(0.25);
+      transform-origin: left;
+      transition: transform 0.3s var(--ease);
+    }
+    .nav__cta:hover::after { transform: scaleX(1); }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      padding: 0 56px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero__watermark {
+      position: absolute;
+      right: -3vw; top: 50%;
+      transform: translateY(-50%);
+      font-size: clamp(160px, 28vw, 400px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--black);
+      opacity: 0.055;
+      white-space: nowrap;
+      line-height: 0.9;
+      pointer-events: none;
+      user-select: none;
+    }
+    .corner {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+    }
+    .corner--tl { top: 90px; left: 56px; }
+    .corner--br { bottom: 44px; right: 56px; transform: rotate(180deg); }
+    .corner__grid {
+      display: grid;
+      grid-template-columns: 4px 4px;
+      grid-template-rows: 4px 4px;
+      gap: 5px;
+    }
+    .corner__dot {
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0.65;
+    }
+    .corner__dot--off { background: transparent; }
+    .hero__accent {
+      position: absolute;
+      left: 56px; bottom: 0;
+      width: 0.5px; height: 100px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      opacity: 0.5;
+    }
+    .hero__scroll {
+      position: absolute;
+      bottom: 44px; left: 84px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--body-text);
+      opacity: 0.5;
+      pointer-events: none;
+      user-select: none;
+    }
+    .hero__scroll-bar { width: 32px; height: 0.5px; background: var(--body-text); }
+    .hero__content {
+      position: relative;
+      z-index: 1;
+      padding-top: 72px;
+      max-width: 640px;
+    }
+    .hero__h1 {
+      font-size: clamp(38px, 5.5vw, 66px);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      color: var(--black);
+      margin-bottom: 28px;
+      animation: fadeUp 0.9s var(--ease) 0.2s both;
+    }
+    .hero__tagline {
+      font-size: 16px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--body-text);
+      margin-bottom: 52px;
+      animation: fadeUp 0.9s var(--ease) 0.35s both;
+    }
+    .hero__cta-wrap { animation: fadeUp 0.9s var(--ease) 0.5s both; }
+
+    /* ─── QUEM SOMOS ─── */
+    .quemsomos {
+      padding: 128px 56px;
+      border-top: 0.5px solid var(--border);
+    }
+    .quemsomos__inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 96px;
+      align-items: start;
+    }
+    .quemsomos__left {
+      position: sticky;
+      top: 108px;
+    }
+    .quemsomos__h2 {
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: -0.01em;
+      color: var(--black);
+      margin-top: 18px;
+    }
+    .quemsomos__body {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--body-text);
+    }
+    .quemsomos__body p + p { margin-top: 20px; }
+    .quemsomos__body strong { font-weight: 700; color: var(--black); }
+    .quemsomos__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 36px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      transition: gap 0.25s var(--ease);
+    }
+    .quemsomos__cta:hover { gap: 16px; }
+    .quemsomos__cta-bar {
+      display: block;
+      width: 18px; height: 0.5px;
+      background: var(--gold);
+      transition: width 0.25s var(--ease);
+    }
+    .quemsomos__cta:hover .quemsomos__cta-bar { width: 28px; }
+
+    /* ─── SERVICES ─── */
+    .services {
+      padding: 128px 56px;
+      background: #E8E4DC;
+      border-top: 0.5px solid rgba(26,26,24,0.1);
+    }
+    .services__inner { max-width: 1180px; margin: 0 auto; }
+    .services__header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: end;
+      gap: 48px;
+      margin-bottom: 72px;
+    }
+    .services__h2 {
+      font-size: clamp(28px, 3.6vw, 44px);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      color: var(--black);
+      margin-top: 18px;
+    }
+    .symbol { display: block; width: 68px; margin-bottom: 18px; }
+    .services__intro {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--body-text);
+      line-height: 1.75;
+      max-width: 380px;
+    }
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 0.5px solid rgba(26,26,24,0.1);
+    }
+    .svc { padding: 52px 44px 52px 0; border-right: 0.5px solid rgba(26,26,24,0.1); }
+    .svc:nth-child(2) { padding-left: 44px; }
+    .svc:last-child   { border-right: none; padding-left: 44px; padding-right: 0; }
+    .svc__num {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 36px;
+    }
+    .svc__title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+    .svc__body {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--body-text);
+      margin-bottom: 36px;
+    }
+    .svc__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--black);
+      transition: gap 0.25s var(--ease);
+    }
+    .svc__link:hover { gap: 18px; }
+    .svc__link-bar {
+      display: block;
+      width: 18px; height: 0.5px;
+      background: var(--gold);
+      transition: width 0.25s var(--ease);
+    }
+    .svc__link:hover .svc__link-bar { width: 28px; }
+
+    /* ─── CASES ─── */
+    .cases {
+      padding: 128px 56px;
+      background: var(--charcoal);
+      border-top: none;
+    }
+    .cases__inner { max-width: 1180px; margin: 0 auto; }
+    .cases__header { margin-bottom: 52px; }
+    .cases__h2 {
+      font-size: clamp(28px, 3.6vw, 44px);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      color: var(--sand);
+      margin-top: 18px;
+    }
+    /* Cases — overrides for dark background */
+    .cases .label { color: var(--gold-light); }
+    .cases .label::before { background: var(--gold-light); }
+    .cases .carousel__btn {
+      background: rgba(58,58,56,0.92);
+      border-color: rgba(242,240,235,0.15);
+      color: var(--sand);
+    }
+    .cases .carousel__btn:hover { background: rgba(242,240,235,0.1); }
+    .cases .carousel__progress { background: rgba(242,240,235,0.1); }
+    .cases .carousel__counter { color: rgba(242,240,235,0.45); }
+    .cases .testimonials__label .label { color: var(--gold-light); }
+    .cases .testimonials__label .label::before { background: var(--gold-light); }
+    .cases .testimonials__grid { border-top-color: rgba(242,240,235,0.1); }
+    .cases .testimonial { border-right-color: rgba(242,240,235,0.1); border-bottom-color: rgba(242,240,235,0.1); }
+    .cases .testimonial__quote { color: rgba(242,240,235,0.6); }
+    .cases .testimonial__quote strong { color: var(--sand); }
+    .cases .testimonial__author { color: var(--gold-light); }
+    .cases .testimonial__company { color: rgba(242,240,235,0.4); }
+
+    /* Carousel */
+    .carousel { position: relative; }
+    .carousel__track {
+      display: flex;
+      transition: transform 0.65s var(--ease);
+      will-change: transform;
+    }
+    .carousel__slide {
+      flex: 0 0 100%;
+      height: 560px;
+      overflow: hidden;
+    }
+    .carousel__slide img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .carousel__btn {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px;
+      background: rgba(242,240,235,0.88);
+      border: 0.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 15px;
+      color: var(--black);
+      z-index: 5;
+      transition: background 0.2s;
+      user-select: none;
+    }
+    .carousel__btn:hover { background: var(--sand); }
+    .carousel__btn--prev { left: 16px; }
+    .carousel__btn--next { right: 16px; }
+    .carousel__footer {
+      display: flex;
+      align-items: center;
+      padding: 16px 0 0;
+    }
+    .carousel__progress {
+      flex: 1;
+      height: 0.5px;
+      background: var(--border);
+      margin-right: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel__progress-fill {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      background: var(--gold);
+      transition: width 0.65s var(--ease);
+    }
+    .carousel__counter {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: var(--body-text);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      margin-top: 96px;
+    }
+    .testimonials__label { margin-bottom: 52px; }
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 0.5px solid var(--border);
+    }
+    .testimonial {
+      padding: 52px 48px 52px 0;
+      border-right: 0.5px solid var(--border);
+    }
+    .testimonial:last-child {
+      border-right: none;
+      padding-left: 48px;
+      padding-right: 0;
+    }
+    .testimonial__symbol { margin-bottom: 32px; }
+    .testimonial__quote {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--body-text);
+      font-style: normal;
+      margin-bottom: 28px;
+    }
+    .testimonial__quote strong { font-weight: 500; color: var(--black); }
+    .testimonial__author {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .testimonial__company {
+      display: block;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--body-text);
+      margin-top: 4px;
+    }
+
+    /* ─── EQUIPE ─── */
+    .team {
+      padding: 128px 56px;
+      border-top: 0.5px solid var(--border);
+    }
+    .team__inner { max-width: 1180px; margin: 0 auto; }
+    .team__header { margin-bottom: 72px; }
+    .team__h2 {
+      font-size: clamp(28px, 3.6vw, 44px);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      color: var(--black);
+      margin-top: 18px;
+    }
+    .team__partners {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      margin-bottom: 96px;
+    }
+    .partner__photo-wrap {
+      width: 156px; height: 156px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 0.75px solid var(--gold-light);
+      margin-bottom: 28px;
+      flex-shrink: 0;
+    }
+    .partner__photo {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      filter: grayscale(1);
+    }
+    .partner__name {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+    .partner__role {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .partner__bio {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--body-text);
+    }
+
+    /* Team photo strip */
+    .team__strip-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+    .team__strip-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--body-text);
+    }
+    .team__strip-nav { display: flex; gap: 8px; }
+    .team__nav-btn {
+      width: 36px; height: 36px;
+      border: 0.5px solid var(--border);
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 14px;
+      color: var(--black);
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .team__nav-btn:hover { background: var(--black); color: var(--sand); border-color: var(--black); }
+    .team__strip {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .team__strip::-webkit-scrollbar { display: none; }
+    .team__strip-item {
+      flex: 0 0 calc(50% - 10px);
+      aspect-ratio: 4 / 3;
+      scroll-snap-align: start;
+      overflow: hidden;
+    }
+    .team__strip-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: grayscale(1);
+    }
+
+    /* ─── CONTACT CTA ─── */
+    .contact {
+      position: relative;
+      overflow: hidden;
+      background: var(--charcoal);
+      padding: 128px 56px;
+    }
+    .contact__watermark {
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: clamp(100px, 22vw, 300px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--sand);
+      opacity: 0.04;
+      white-space: nowrap;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+    .contact__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+    .contact__h2 {
+      font-size: clamp(32px, 4.6vw, 58px);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      color: var(--sand);
+      margin-top: 20px;
+      margin-bottom: 48px;
+    }
+    .contact__list { display: flex; flex-direction: column; }
+    .contact__row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 28px 0;
+      border-bottom: 0.5px solid rgba(242,240,235,0.1);
+    }
+    .contact__row:first-child { border-top: 0.5px solid rgba(242,240,235,0.1); }
+    .contact__row-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      opacity: 0.7;
+    }
+    .contact__row-value {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--sand);
+      transition: color 0.2s;
+    }
+    .contact__row-value:hover { color: var(--gold-light); }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      background: var(--charcoal);
+      border-top: 0.5px solid rgba(242,240,235,0.07);
+      padding: 28px 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer__brand { display: flex; align-items: center; gap: 14px; }
+    .footer__logo { width: 110px; height: auto; opacity: 0.55; }
+    .footer__copy {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: rgba(242,240,235,0.22);
+    }
+
+    /* ─── SCROLL REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+    }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.12s; }
+    .d2 { transition-delay: 0.24s; }
+    .d3 { transition-delay: 0.36s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 960px) {
+      .nav { padding: 0 28px; }
+      .nav__links { display: none; }
+
+      .hero { padding: 0 28px; min-height: 100svh; }
+      .corner--tl { left: 28px; }
+      .corner--br { right: 28px; }
+      .hero__accent { left: 28px; }
+      .hero__scroll { left: 56px; }
+
+      .quemsomos,
+      .services,
+      .cases,
+      .team,
+      .contact { padding: 88px 28px; }
+
+      .quemsomos__inner { grid-template-columns: 1fr; gap: 36px; }
+      .quemsomos__left { position: static; }
+
+      .services__header { grid-template-columns: 1fr; gap: 32px; }
+      .services__grid { grid-template-columns: 1fr; }
+      .svc { padding: 44px 0; border-right: none; border-bottom: 0.5px solid rgba(26,26,24,0.1); }
+      .svc:nth-child(2) { padding-left: 0; }
+      .svc:last-child   { padding-left: 0; border-bottom: none; }
+
+      .carousel__slide { height: 240px; }
+
+      .testimonials__grid { grid-template-columns: 1fr; }
+      .testimonial { padding: 44px 0; border-right: none; border-bottom: 0.5px solid rgba(242,240,235,0.1); }
+      .testimonial:last-child { padding-left: 0; border-bottom: none; }
+
+      .team__partners { grid-template-columns: 1fr; gap: 52px; }
+      .team__strip-item { flex: 0 0 calc(80% - 10px); }
+
+      .contact__inner { grid-template-columns: 1fr; gap: 52px; }
+
+      .footer { padding: 24px 28px; flex-direction: column; gap: 12px; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero__h1 { font-size: clamp(34px, 9.5vw, 48px); }
+      .hero__watermark { opacity: 0.04; right: -8vw; }
+      .team__strip-item { flex: 0 0 calc(100% - 10px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAV ═══ -->
+  <nav class="nav" id="main-nav" aria-label="Navegação principal">
+    <a href="#" aria-label="Trópico Eventos — início">
+      <img src="assets/logo/logo-horizontal-preto.png" alt="Trópico Eventos" class="nav__logo">
+    </a>
+    <ul class="nav__links">
+      <li><a href="#quemsomos">Quem somos</a></li>
+      <li><a href="#servicos">O que fazemos</a></li>
+      <li><a href="#cases">Cases</a></li>
+      <li><a href="#equipe">Equipe</a></li>
+    </ul>
+    <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="nav__cta">Fale com a gente</a>
+  </nav>
+
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="inicio">
+    <span class="hero__watermark" aria-hidden="true">TRÓPICO</span>
+
+    <div class="corner corner--tl" aria-hidden="true">
+      <div class="corner__grid">
+        <div class="corner__dot"></div><div class="corner__dot"></div>
+        <div class="corner__dot"></div><div class="corner__dot corner__dot--off"></div>
+      </div>
+    </div>
+    <div class="corner corner--br" aria-hidden="true">
+      <div class="corner__grid">
+        <div class="corner__dot"></div><div class="corner__dot"></div>
+        <div class="corner__dot"></div><div class="corner__dot corner__dot--off"></div>
+      </div>
+    </div>
+
+    <div class="hero__content">
+      <h1 class="hero__h1">
+        Do detalhe<br>
+        que ninguém vê<br>
+        ao momento<br>
+        que ninguém esquece.
+      </h1>
+      <p class="hero__tagline">Para cruzar a fronteira do óbvio.</p>
+      <div class="hero__cta-wrap">
+        <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="btn">Cruzar a linha &nbsp;→</a>
+      </div>
+    </div>
+
+    <div class="hero__accent" aria-hidden="true"></div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-bar"></span>Rolar
+    </div>
+  </section>
+
+
+  <!-- ═══ QUEM SOMOS ═══ -->
+  <section class="quemsomos" id="quemsomos">
+    <div class="quemsomos__inner">
+
+      <div class="quemsomos__left">
+        <span class="label reveal">Quem somos</span>
+        <h2 class="quemsomos__h2 reveal d1">
+          Para trazer uma nova visão ao mercado de live marketing.
+        </h2>
+      </div>
+
+      <div class="reveal d2">
+        <div class="quemsomos__body">
+          <p>A Trópico nasceu de uma conversa — e da certeza de que evento não precisa ser sinônimo de dor de cabeça.</p>
+          <p>Ao longo de anos de experiência no universo de eventos corporativos e live marketing, identificamos o que faz a diferença entre um projeto que apenas acontece e um projeto que <strong>deixa marca</strong>.</p>
+          <p>Para nós, <strong>a criatividade é o pontapé inicial</strong>. Mas organização, transparência, respeito e ética de trabalho são os pilares que mantêm essa força criativa firme até a execução.</p>
+          <p>Planejamos e produzimos projetos de todos os portes — de ativações e experiências imersivas a grandes eventos corporativos — com suporte completo do início ao fim.</p>
+        </div>
+        <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="quemsomos__cta">
+          Conte conosco
+          <span class="quemsomos__cta-bar"></span>
+          →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══ O QUE FAZEMOS ═══ -->
+  <section class="services" id="servicos">
+    <div class="services__inner">
+
+      <div class="services__header">
+        <div>
+          <span class="label reveal">O que fazemos</span>
+          <h2 class="services__h2 reveal d1">
+            Três frentes. Uma única obsessão pelo inusitado.
+          </h2>
+        </div>
+        <div class="reveal d2">
+          <svg class="symbol" viewBox="0 0 70 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="13" cy="13" r="12.25" stroke="#8A7F5A" stroke-width="0.75"/>
+            <circle cx="35" cy="13" r="12.25" stroke="#8A7F5A" stroke-width="0.75"/>
+            <circle cx="57" cy="13" r="12.25" stroke="#8A7F5A" stroke-width="0.75"/>
+          </svg>
+          <p class="services__intro">Não produzimos eventos. Construímos os segundos que as pessoas vão querer contar depois.</p>
+        </div>
+      </div>
+
+      <div class="services__grid">
+
+        <div class="svc reveal">
+          <span class="svc__num">01</span>
+          <h3 class="svc__title">Eventos</h3>
+          <p class="svc__body">Corporativos, culturais, congressos e shows. Do briefing ao encerramento, com presença em cada detalhe que muda o resultado.</p>
+          <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="svc__link">
+            Falar sobre um projeto <span class="svc__link-bar"></span>→
+          </a>
+        </div>
+
+        <div class="svc reveal d1">
+          <span class="svc__num">02</span>
+          <h3 class="svc__title">Experiências</h3>
+          <p class="svc__body">Ativações, lançamentos, imersões. Criamos percursos sensoriais que transformam presença em memória afetiva.</p>
+          <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="svc__link">
+            Falar sobre um projeto <span class="svc__link-bar"></span>→
+          </a>
+        </div>
+
+        <div class="svc reveal d2">
+          <span class="svc__num">03</span>
+          <h3 class="svc__title">Audiovisual</h3>
+          <p class="svc__body">Captação, transmissão ao vivo, cobertura e criação de conteúdo. Para quem entende que a câmera também tem ponto de vista.</p>
+          <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="svc__link">
+            Falar sobre um projeto <span class="svc__link-bar"></span>→
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CASES + DEPOIMENTOS ═══ -->
+  <section class="cases" id="cases">
+    <div class="cases__inner">
+
+      <div class="cases__header">
+        <span class="label reveal">Cases</span>
+        <h2 class="cases__h2 reveal d1">Projetos que ficaram<br>na memória.</h2>
+      </div>
+
+      <!-- Carousel -->
+      <div class="carousel reveal d2" id="cases-carousel" role="region" aria-label="Galeria de cases">
+        <div class="carousel__track">
+          <div class="carousel__slide"><img src="cases/case-1.jpg" alt="" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-2.jpg" alt="" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-3.jpg" alt="" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-4.jpg" alt="" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-5.jpg" alt="" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-6.jpg" alt="" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-A.jpg" alt="" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-B.jpg" alt="" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-C.jpg" alt="" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-D.jpg" alt="" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-E.jpg" alt="" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-F.jpg" alt="" loading="lazy"></div>
+        </div>
+        <button class="carousel__btn carousel__btn--prev" aria-label="Foto anterior">←</button>
+        <button class="carousel__btn carousel__btn--next" aria-label="Próxima foto">→</button>
+        <div class="carousel__footer">
+          <div class="carousel__progress">
+            <div class="carousel__progress-fill" id="cases-fill"></div>
+          </div>
+          <span class="carousel__counter" id="cases-counter">01 / 12</span>
+        </div>
+      </div>
+
+      <!-- Depoimentos -->
+      <div class="testimonials">
+        <div class="testimonials__label">
+          <span class="label reveal">O que dizem</span>
+        </div>
+        <div class="testimonials__grid">
+
+          <div class="testimonial reveal">
+            <div class="testimonial__symbol">
+              <svg width="60" viewBox="0 0 70 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="13" cy="13" r="12.25" stroke="#8A7F5A" stroke-width="0.75"/>
+                <circle cx="35" cy="13" r="12.25" stroke="#8A7F5A" stroke-width="0.75"/>
+                <circle cx="57" cy="13" r="12.25" stroke="#8A7F5A" stroke-width="0.75"/>
+              </svg>
+            </div>
+            <blockquote class="testimonial__quote">
+              "Passando pra registrar meu agradecimento pela parceria nesse evento tão importante pra nós. <strong>Que bom ter seguido minha intuição e apostado na Trópico.</strong> Aproveitem o descanso e voltem com a energia renovada porque o Top de Vendas 2026 já tá ON!"
+            </blockquote>
+            <p class="testimonial__author">
+              Adriane Zanoto
+              <span class="testimonial__company">Paraná Banco</span>
+            </p>
+          </div>
+
+          <div class="testimonial reveal d1">
+            <div class="testimonial__symbol" aria-hidden="true" style="visibility:hidden;">
+              <svg width="60" viewBox="0 0 70 26" fill="none">
+                <circle cx="13" cy="13" r="12.25" stroke="#8A7F5A" stroke-width="0.75"/>
+              </svg>
+            </div>
+            <blockquote class="testimonial__quote">
+              "Conseguimos <strong>elevar muito o nível do nosso evento</strong> por conta da Trópico. Toda vez que eu trago alguma ideia, que normalmente não é nada comum ou convencional, eles topam na hora e me ajudam a executar. Essa parceria com certeza vai ser muito duradoura."
+            </blockquote>
+            <p class="testimonial__author">
+              Mayra Mino
+              <span class="testimonial__company">Apolar</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══ EQUIPE ═══ -->
+  <section class="team" id="equipe">
+    <div class="team__inner">
+
+      <div class="team__header">
+        <span class="label reveal">Equipe</span>
+        <h2 class="team__h2 reveal d1">As pessoas por trás<br>de cada detalhe.</h2>
+      </div>
+
+      <div class="team__partners">
+
+        <div class="partner reveal">
+          <div class="partner__photo-wrap">
+            <img src="GIL.jpg" alt="Gil Preto" class="partner__photo" style="object-position: center 8%;">
+          </div>
+          <h3 class="partner__name">Gil Preto</h3>
+          <p class="partner__role">Produtor · DJ · Curador Musical</p>
+          <p class="partner__bio">Produtor de eventos, DJ e curador musical com 16 anos de experiência em festas, shows e festivais. Lidera há 5 anos a abertura do Festival de Teatro de Curitiba. No portfólio, destacam-se Gastronomix, Feira Mia Cara e Virada Paradisíaca, além de eventos corporativos e experiências imersivas.</p>
+        </div>
+
+        <div class="partner reveal d1">
+          <div class="partner__photo-wrap">
+            <img src="IGOR.jpg" alt="Igor Padilha" class="partner__photo" style="object-position: center 12%;">
+          </div>
+          <h3 class="partner__name">Igor Padilha</h3>
+          <p class="partner__role">Produtor · Diretor Artístico</p>
+          <p class="partner__bio">Produtor e diretor artístico com formações em Relações Públicas (UFPR), Cinema (PUC-PR) e Gestão de Entretenimento (PUC-Rio). Especialista em eventos corporativos e experiências de marca, do planejamento à execução. Desde 2024, atua exclusivamente no planejamento, direção artística e gestão de projetos.</p>
+        </div>
+
+      </div>
+
+      <!-- Team strip -->
+      <div class="reveal">
+        <div class="team__strip-head">
+          <span class="team__strip-label">Bastidores</span>
+          <div class="team__strip-nav">
+            <button class="team__nav-btn" id="team-prev" aria-label="Anterior">←</button>
+            <button class="team__nav-btn" id="team-next" aria-label="Próximo">→</button>
+          </div>
+        </div>
+        <div class="team__strip" id="team-strip">
+          <div class="team__strip-item">
+            <img src="equipe-1.jpg" alt="Equipe Trópico" loading="lazy">
+          </div>
+          <div class="team__strip-item">
+            <img src="equipe-2.jpg" alt="Equipe Trópico" loading="lazy">
+          </div>
+          <div class="team__strip-item">
+            <img src="equipe-3.jpg" alt="Equipe Trópico" loading="lazy">
+          </div>
+          <div class="team__strip-item">
+            <img src="equipe-4.jpg" alt="Equipe Trópico" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══ CONTATO ═══ -->
+  <section class="contact" id="contato">
+    <span class="contact__watermark" aria-hidden="true">TRÓPICO</span>
+    <div class="contact__inner">
+
+      <div>
+        <span class="label label--light reveal">Contato</span>
+        <h2 class="contact__h2 reveal d1">
+          Prepare-se<br>para cruzar<br>a linha.
+        </h2>
+        <div class="reveal d2">
+          <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
+            Falar com a gente &nbsp;→
+          </a>
+        </div>
+      </div>
+
+      <div class="contact__list reveal d1">
+        <div class="contact__row">
+          <span class="contact__row-label">Email</span>
+          <a href="mailto:contato@tropicoeventos.com" class="contact__row-value">contato@tropicoeventos.com</a>
+        </div>
+        <div class="contact__row">
+          <span class="contact__row-label">WhatsApp</span>
+          <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="contact__row-value">(41) 98429-9805</a>
+        </div>
+        <div class="contact__row">
+          <span class="contact__row-label">Instagram</span>
+          <a href="https://instagram.com/tropico.eventos" target="_blank" rel="noopener noreferrer" class="contact__row-value">@tropico.eventos</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <img src="assets/logo/logo-horizontal-branco.png" alt="Trópico Eventos" class="footer__logo">
+    </div>
+    <span class="footer__copy">© 2026 Trópico Eventos · tropicoeventos.com.br</span>
+  </footer>
+
+
+  <script>
+    /* ─ Nav scroll ─ */
+    (function () {
+      var nav = document.getElementById('main-nav');
+      function tick() { nav.classList.toggle('scrolled', window.scrollY > 24); }
+      window.addEventListener('scroll', tick, { passive: true });
+      tick();
+    }());
+
+    /* ─ Scroll reveal ─ */
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!window.IntersectionObserver) {
+        els.forEach(function (el) { el.classList.add('in-view'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -28px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    }());
+
+    /* ─ Cases carousel ─ */
+    (function () {
+      var wrap    = document.getElementById('cases-carousel');
+      if (!wrap) return;
+      var track   = wrap.querySelector('.carousel__track');
+      var total   = wrap.querySelectorAll('.carousel__slide').length;
+      var fill    = document.getElementById('cases-fill');
+      var counter = document.getElementById('cases-counter');
+      var cur     = 0;
+      var timer;
+
+      function go(n) {
+        cur = ((n % total) + total) % total;
+        track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+        counter.textContent   = pad(cur + 1) + ' / ' + pad(total);
+        fill.style.width      = ((cur + 1) / total * 100) + '%';
+      }
+      function pad(n) { return String(n).padStart(2, '0'); }
+      function restart() { clearInterval(timer); timer = setInterval(function () { go(cur + 1); }, 5000); }
+
+      wrap.querySelector('.carousel__btn--prev').addEventListener('click', function () { go(cur - 1); restart(); });
+      wrap.querySelector('.carousel__btn--next').addEventListener('click', function () { go(cur + 1); restart(); });
+
+      var sx = 0;
+      wrap.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+      wrap.addEventListener('touchend',   function (e) {
+        var dx = e.changedTouches[0].clientX - sx;
+        if (Math.abs(dx) > 40) { go(cur + (dx > 0 ? -1 : 1)); restart(); }
+      });
+
+      go(0);
+      restart();
+    }());
+
+    /* ─ Team strip scroll ─ */
+    (function () {
+      var strip = document.getElementById('team-strip');
+      if (!strip) return;
+      function scrollBy(dir) {
+        var item = strip.querySelector('.team__strip-item');
+        var w    = item ? item.offsetWidth + 20 : strip.clientWidth / 2;
+        strip.scrollBy({ left: dir * w, behavior: 'smooth' });
+      }
+      document.getElementById('team-prev').addEventListener('click', function () { scrollBy(-1); });
+      document.getElementById('team-next').addEventListener('click', function () { scrollBy(1); });
+    }());
+  </script>
+
+</body>
+</html>
