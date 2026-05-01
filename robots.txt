@@ -7,4 +7,4 @@ Allow: /
 User-agent: Twitterbot
 Allow: /
 
-Sitemap: https://tropicoeventos.com.br/sitemap.xml
+Sitemap: https://tropicoeventos.com/sitemap.xml
