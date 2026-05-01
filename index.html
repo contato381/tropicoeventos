@@ -3,13 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trópico Eventos — Para cruzar a fronteira do óbvio.</title>
-  <meta name="description" content="Produtora de eventos, experiências e audiovisual. Do detalhe que ninguém vê ao momento que ninguém esquece.">
-  <meta property="og:title" content="Trópico Eventos">
-  <meta property="og:description" content="Para cruzar a fronteira do óbvio.">
+  <title>Trópico Eventos — Agência de Eventos Corporativos e Brand Experience em Curitiba</title>
+  <meta name="description" content="Agência de eventos corporativos e brand experience em Curitiba. Planejamos e produzimos eventos, experiências imersivas e audiovisual — do briefing ao encerramento, com presença em cada detalhe.">
+  <meta name="keywords" content="agência de eventos Curitiba, eventos corporativos Curitiba, brand experience, produção de eventos, experiências imersivas, agência de evento em Curitiba, live marketing, ativações de marca">
+  <meta name="google-site-verification" content="prKn7S_4g4ZRkw2pFr1MpouuzIuhWo6ZT_zvTVvhEiY" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <meta property="og:site_name" content="Trópico Eventos">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Trópico Eventos — Agência de Eventos Corporativos e Brand Experience em Curitiba">
+  <meta property="og:description" content="Agência de eventos corporativos e brand experience em Curitiba. Planejamos e produzimos eventos, experiências imersivas e audiovisual — do briefing ao encerramento.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tropicoeventos.com.br">
+  <meta property="og:image" content="https://tropicoeventos.com.br/thumb.png">
+  <meta property="og:image:secure_url" content="https://tropicoeventos.com.br/thumb.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Trópico Eventos — Para cruzar a fronteira do óbvio.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Trópico Eventos — Agência de Eventos Corporativos e Brand Experience em Curitiba">
+  <meta name="twitter:description" content="Agência de eventos corporativos e brand experience em Curitiba. Planejamos e produzimos eventos, experiências imersivas e audiovisual — do briefing ao encerramento.">
+  <meta name="twitter:image" content="https://tropicoeventos.com.br/thumb.png">
+  <meta name="twitter:image:alt" content="Trópico Eventos — Para cruzar a fronteira do óbvio.">
   <link rel="canonical" href="https://tropicoeventos.com.br">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Trópico Eventos",
+    "description": "Agência de eventos corporativos e brand experience em Curitiba. Planejamos e produzimos eventos, experiências imersivas, ativações de marca e audiovisual.",
+    "url": "https://tropicoeventos.com.br",
+    "telephone": "+554184299805",
+    "email": "contato@tropicoeventos.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Curitiba",
+      "addressRegion": "PR",
+      "addressCountry": "BR"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Paraná"
+    },
+    "sameAs": ["https://www.instagram.com/tropico.eventos"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Serviços",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Eventos Corporativos",
+            "description": "Produção de eventos corporativos, culturais, congressos e shows em Curitiba. Do briefing ao encerramento, com presença em cada detalhe."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Brand Experience",
+            "description": "Ativações, lançamentos e experiências imersivas de marca. Criamos percursos sensoriais que transformam presença em memória afetiva."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Audiovisual",
+            "description": "Captação, transmissão ao vivo, cobertura e criação de conteúdo audiovisual para eventos corporativos e experiências de marca."
+          }
+        }
+      ]
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,500;9..40,700&display=swap" rel="stylesheet">
@@ -130,6 +201,11 @@
     }
     .nav__links a:hover { color: var(--gold); }
     .nav__links a:hover::after { width: 100%; }
+    .nav__right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
     .nav__cta {
       font-size: 11px;
       font-weight: 500;
@@ -149,6 +225,36 @@
       transition: transform 0.3s var(--ease);
     }
     .nav__cta:hover::after { transform: scaleX(1); }
+
+    /* ─── LANG SWITCH ─── */
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .lang-btn {
+      font-family: inherit;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--body-text);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 2px 0;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+    .lang-btn:hover { color: var(--black); }
+    .lang-btn--active { color: var(--black); }
+    .lang-sep {
+      font-size: 9px;
+      color: var(--border);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
 
     /* ─── HERO ─── */
     .hero {
@@ -759,6 +865,7 @@
       .svc:nth-child(2) { padding-left: 0; }
       .svc:last-child   { padding-left: 0; border-bottom: none; }
 
+      .carousel { overflow: hidden; }
       .carousel__slide { height: 240px; }
 
       .testimonials__grid { grid-template-columns: 1fr; }
@@ -788,12 +895,21 @@
       <img src="assets/logo/logo-horizontal-preto.png" alt="Trópico Eventos" class="nav__logo">
     </a>
     <ul class="nav__links">
-      <li><a href="#quemsomos">Quem somos</a></li>
-      <li><a href="#servicos">O que fazemos</a></li>
-      <li><a href="#cases">Cases</a></li>
-      <li><a href="#equipe">Equipe</a></li>
+      <li><a href="#quemsomos" data-i18n="nav.quemsomos">Quem somos</a></li>
+      <li><a href="#servicos" data-i18n="nav.fazemos">O que fazemos</a></li>
+      <li><a href="#cases" data-i18n="nav.cases">Cases</a></li>
+      <li><a href="#equipe" data-i18n="nav.equipe">Equipe</a></li>
     </ul>
-    <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="nav__cta">Fale com a gente</a>
+    <div class="nav__right">
+      <div class="lang-switch" role="navigation" aria-label="Idioma / Language">
+        <button class="lang-btn" data-lang="pt">PT</button>
+        <span class="lang-sep" aria-hidden="true">·</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-sep" aria-hidden="true">·</span>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+      <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="nav__cta" data-i18n="nav.cta">Fale com a gente</a>
+    </div>
   </nav>
 
 
@@ -815,21 +931,21 @@
     </div>
 
     <div class="hero__content">
-      <h1 class="hero__h1">
+      <h1 class="hero__h1" data-i18n-html="hero.h1">
         Do detalhe<br>
         que ninguém vê<br>
         ao momento<br>
         que ninguém esquece.
       </h1>
-      <p class="hero__tagline">Para cruzar a fronteira do óbvio.</p>
+      <p class="hero__tagline" data-i18n="hero.tagline">Para cruzar a fronteira do óbvio.</p>
       <div class="hero__cta-wrap">
-        <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="btn">Cruzar a linha &nbsp;→</a>
+        <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="btn" data-i18n-html="hero.cta">Cruzar a linha &nbsp;→</a>
       </div>
     </div>
 
     <div class="hero__accent" aria-hidden="true"></div>
     <div class="hero__scroll" aria-hidden="true">
-      <span class="hero__scroll-bar"></span>Rolar
+      <span class="hero__scroll-bar"></span><span data-i18n="hero.scroll">Rolar</span>
     </div>
   </section>
 
@@ -839,21 +955,21 @@
     <div class="quemsomos__inner">
 
       <div class="quemsomos__left">
-        <span class="label reveal">Quem somos</span>
-        <h2 class="quemsomos__h2 reveal d1">
+        <span class="label reveal" data-i18n="qs.label">Quem somos</span>
+        <h2 class="quemsomos__h2 reveal d1" data-i18n="qs.h2">
           Para trazer uma nova visão ao mercado de live marketing.
         </h2>
       </div>
 
       <div class="reveal d2">
-        <div class="quemsomos__body">
+        <div class="quemsomos__body" data-i18n-html="qs.body">
           <p>A Trópico nasceu de uma conversa — e da certeza de que evento não precisa ser sinônimo de dor de cabeça.</p>
           <p>Ao longo de anos de experiência no universo de eventos corporativos e live marketing, identificamos o que faz a diferença entre um projeto que apenas acontece e um projeto que <strong>deixa marca</strong>.</p>
           <p>Para nós, <strong>a criatividade é o pontapé inicial</strong>. Mas organização, transparência, respeito e ética de trabalho são os pilares que mantêm essa força criativa firme até a execução.</p>
           <p>Planejamos e produzimos projetos de todos os portes — de ativações e experiências imersivas a grandes eventos corporativos — com suporte completo do início ao fim.</p>
         </div>
         <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="quemsomos__cta">
-          Conte conosco
+          <span data-i18n="qs.cta">Conte conosco</span>
           <span class="quemsomos__cta-bar"></span>
           →
         </a>
@@ -869,8 +985,8 @@
 
       <div class="services__header">
         <div>
-          <span class="label reveal">O que fazemos</span>
-          <h2 class="services__h2 reveal d1">
+          <span class="label reveal" data-i18n="svc.label">O que fazemos</span>
+          <h2 class="services__h2 reveal d1" data-i18n="svc.h2">
             Três frentes. Uma única obsessão pelo inusitado.
           </h2>
         </div>
@@ -880,7 +996,7 @@
             <circle cx="35" cy="13" r="12.25" stroke="#8A7F5A" stroke-width="0.75"/>
             <circle cx="57" cy="13" r="12.25" stroke="#8A7F5A" stroke-width="0.75"/>
           </svg>
-          <p class="services__intro">Não produzimos eventos. Construímos os segundos que as pessoas vão querer contar depois.</p>
+          <p class="services__intro" data-i18n="svc.intro">Não produzimos eventos. Construímos os segundos que as pessoas vão querer contar depois.</p>
         </div>
       </div>
 
@@ -888,28 +1004,28 @@
 
         <div class="svc reveal">
           <span class="svc__num">01</span>
-          <h3 class="svc__title">Eventos</h3>
-          <p class="svc__body">Corporativos, culturais, congressos e shows. Do briefing ao encerramento, com presença em cada detalhe que muda o resultado.</p>
+          <h3 class="svc__title" data-i18n="svc1.title">Eventos</h3>
+          <p class="svc__body" data-i18n="svc1.body">Corporativos, culturais, congressos e shows. Do briefing ao encerramento, com presença em cada detalhe que muda o resultado.</p>
           <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="svc__link">
-            Falar sobre um projeto <span class="svc__link-bar"></span>→
+            <span data-i18n="svc1.link">Falar sobre um projeto</span> <span class="svc__link-bar"></span>→
           </a>
         </div>
 
         <div class="svc reveal d1">
           <span class="svc__num">02</span>
-          <h3 class="svc__title">Experiências</h3>
-          <p class="svc__body">Ativações, lançamentos, imersões. Criamos percursos sensoriais que transformam presença em memória afetiva.</p>
+          <h3 class="svc__title" data-i18n="svc2.title">Experiências</h3>
+          <p class="svc__body" data-i18n="svc2.body">Ativações, lançamentos, imersões. Criamos percursos sensoriais que transformam presença em memória afetiva.</p>
           <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="svc__link">
-            Falar sobre um projeto <span class="svc__link-bar"></span>→
+            <span data-i18n="svc2.link">Falar sobre um projeto</span> <span class="svc__link-bar"></span>→
           </a>
         </div>
 
         <div class="svc reveal d2">
           <span class="svc__num">03</span>
-          <h3 class="svc__title">Audiovisual</h3>
-          <p class="svc__body">Captação, transmissão ao vivo, cobertura e criação de conteúdo. Para quem entende que a câmera também tem ponto de vista.</p>
+          <h3 class="svc__title" data-i18n="svc3.title">Audiovisual</h3>
+          <p class="svc__body" data-i18n="svc3.body">Captação, transmissão ao vivo, cobertura e criação de conteúdo. Para quem entende que a câmera também tem ponto de vista.</p>
           <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="svc__link">
-            Falar sobre um projeto <span class="svc__link-bar"></span>→
+            <span data-i18n="svc3.link">Falar sobre um projeto</span> <span class="svc__link-bar"></span>→
           </a>
         </div>
 
@@ -923,25 +1039,25 @@
     <div class="cases__inner">
 
       <div class="cases__header">
-        <span class="label reveal">Cases</span>
-        <h2 class="cases__h2 reveal d1">Projetos que ficaram<br>na memória.</h2>
+        <span class="label reveal" data-i18n="cases.label">Cases</span>
+        <h2 class="cases__h2 reveal d1" data-i18n-html="cases.h2">Projetos que ficaram<br>na memória.</h2>
       </div>
 
       <!-- Carousel -->
       <div class="carousel reveal d2" id="cases-carousel" role="region" aria-label="Galeria de cases">
         <div class="carousel__track">
-          <div class="carousel__slide"><img src="cases/case-1.jpg" alt="" loading="lazy"></div>
-          <div class="carousel__slide"><img src="cases/case-2.jpg" alt="" loading="lazy"></div>
-          <div class="carousel__slide"><img src="cases/case-3.jpg" alt="" loading="lazy"></div>
-          <div class="carousel__slide"><img src="cases/case-4.jpg" alt="" loading="lazy"></div>
-          <div class="carousel__slide"><img src="cases/case-5.jpg" alt="" loading="lazy"></div>
-          <div class="carousel__slide"><img src="cases/case-6.jpg" alt="" loading="lazy"></div>
-          <div class="carousel__slide"><img src="cases/case-A.jpg" alt="" loading="lazy"></div>
-          <div class="carousel__slide"><img src="cases/case-B.jpg" alt="" loading="lazy"></div>
-          <div class="carousel__slide"><img src="cases/case-C.jpg" alt="" loading="lazy"></div>
-          <div class="carousel__slide"><img src="cases/case-D.jpg" alt="" loading="lazy"></div>
-          <div class="carousel__slide"><img src="cases/case-E.jpg" alt="" loading="lazy"></div>
-          <div class="carousel__slide"><img src="cases/case-F.jpg" alt="" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-1.jpg" alt="Evento corporativo produzido pela Trópico Eventos em Curitiba" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-2.jpg" alt="Brand experience — Trópico Eventos, Curitiba" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-3.jpg" alt="Produção de evento corporativo — Trópico Eventos" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-4.jpg" alt="Ativação de marca produzida pela Trópico Eventos" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-5.jpg" alt="Experiência imersiva — agência de eventos em Curitiba" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-6.jpg" alt="Evento corporativo em Curitiba — Trópico Eventos" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-A.jpg" alt="Brand experience e live marketing — Trópico Eventos" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-B.jpg" alt="Produção de evento — Trópico Eventos, Curitiba" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-C.jpg" alt="Experiência de marca — Trópico Eventos" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-D.jpg" alt="Evento corporativo — agência Trópico Eventos, Curitiba" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-E.jpg" alt="Ativação e brand experience — Trópico Eventos" loading="lazy"></div>
+          <div class="carousel__slide"><img src="cases/case-F.jpg" alt="Produção de eventos e experiências — Trópico Eventos" loading="lazy"></div>
         </div>
         <button class="carousel__btn carousel__btn--prev" aria-label="Foto anterior">←</button>
         <button class="carousel__btn carousel__btn--next" aria-label="Próxima foto">→</button>
@@ -956,7 +1072,7 @@
       <!-- Depoimentos -->
       <div class="testimonials">
         <div class="testimonials__label">
-          <span class="label reveal">O que dizem</span>
+          <span class="label reveal" data-i18n="test.label">O que dizem</span>
         </div>
         <div class="testimonials__grid">
 
@@ -968,7 +1084,7 @@
                 <circle cx="57" cy="13" r="12.25" stroke="#8A7F5A" stroke-width="0.75"/>
               </svg>
             </div>
-            <blockquote class="testimonial__quote">
+            <blockquote class="testimonial__quote" data-i18n-html="test1.quote">
               "Passando pra registrar meu agradecimento pela parceria nesse evento tão importante pra nós. <strong>Que bom ter seguido minha intuição e apostado na Trópico.</strong> Aproveitem o descanso e voltem com a energia renovada porque o Top de Vendas 2026 já tá ON!"
             </blockquote>
             <p class="testimonial__author">
@@ -983,7 +1099,7 @@
                 <circle cx="13" cy="13" r="12.25" stroke="#8A7F5A" stroke-width="0.75"/>
               </svg>
             </div>
-            <blockquote class="testimonial__quote">
+            <blockquote class="testimonial__quote" data-i18n-html="test2.quote">
               "Conseguimos <strong>elevar muito o nível do nosso evento</strong> por conta da Trópico. Toda vez que eu trago alguma ideia, que normalmente não é nada comum ou convencional, eles topam na hora e me ajudam a executar. Essa parceria com certeza vai ser muito duradoura."
             </blockquote>
             <p class="testimonial__author">
@@ -1004,8 +1120,8 @@
     <div class="team__inner">
 
       <div class="team__header">
-        <span class="label reveal">Equipe</span>
-        <h2 class="team__h2 reveal d1">As pessoas por trás<br>de cada detalhe.</h2>
+        <span class="label reveal" data-i18n="team.label">Equipe</span>
+        <h2 class="team__h2 reveal d1" data-i18n-html="team.h2">As pessoas por trás<br>de cada detalhe.</h2>
       </div>
 
       <div class="team__partners">
@@ -1015,8 +1131,8 @@
             <img src="GIL.jpg" alt="Gil Preto" class="partner__photo" style="object-position: center 8%;">
           </div>
           <h3 class="partner__name">Gil Preto</h3>
-          <p class="partner__role">Produtor · DJ · Curador Musical</p>
-          <p class="partner__bio">Produtor de eventos, DJ e curador musical com 16 anos de experiência em festas, shows e festivais. Lidera há 5 anos a abertura do Festival de Teatro de Curitiba. No portfólio, destacam-se Gastronomix, Feira Mia Cara e Virada Paradisíaca, além de eventos corporativos e experiências imersivas.</p>
+          <p class="partner__role" data-i18n="partner1.role">Produtor · DJ · Curador Musical</p>
+          <p class="partner__bio" data-i18n="partner1.bio">Produtor de eventos, DJ e curador musical com 16 anos de experiência em festas, shows e festivais. Lidera há 5 anos a abertura do Festival de Teatro de Curitiba. No portfólio, destacam-se Gastronomix, Feira Mia Cara e Virada Paradisíaca, além de eventos corporativos e experiências imersivas.</p>
         </div>
 
         <div class="partner reveal d1">
@@ -1024,8 +1140,8 @@
             <img src="IGOR.jpg" alt="Igor Padilha" class="partner__photo" style="object-position: center 12%;">
           </div>
           <h3 class="partner__name">Igor Padilha</h3>
-          <p class="partner__role">Produtor · Diretor Artístico</p>
-          <p class="partner__bio">Produtor e diretor artístico com formações em Relações Públicas (UFPR), Cinema (PUC-PR) e Gestão de Entretenimento (PUC-Rio). Especialista em eventos corporativos e experiências de marca, do planejamento à execução. Desde 2024, atua exclusivamente no planejamento, direção artística e gestão de projetos.</p>
+          <p class="partner__role" data-i18n="partner2.role">Produtor · Diretor Artístico</p>
+          <p class="partner__bio" data-i18n="partner2.bio">Produtor e diretor artístico com formações em Relações Públicas (UFPR), Cinema (PUC-PR) e Gestão de Entretenimento (PUC-Rio). Especialista em eventos corporativos e experiências de marca, do planejamento à execução. Desde 2024, atua exclusivamente no planejamento, direção artística e gestão de projetos.</p>
         </div>
 
       </div>
@@ -1033,7 +1149,7 @@
       <!-- Team strip -->
       <div class="reveal">
         <div class="team__strip-head">
-          <span class="team__strip-label">Bastidores</span>
+          <span class="team__strip-label" data-i18n="team.strip">Bastidores</span>
           <div class="team__strip-nav">
             <button class="team__nav-btn" id="team-prev" aria-label="Anterior">←</button>
             <button class="team__nav-btn" id="team-next" aria-label="Próximo">→</button>
@@ -1065,12 +1181,12 @@
     <div class="contact__inner">
 
       <div>
-        <span class="label label--light reveal">Contato</span>
-        <h2 class="contact__h2 reveal d1">
+        <span class="label label--light reveal" data-i18n="contact.label">Contato</span>
+        <h2 class="contact__h2 reveal d1" data-i18n-html="contact.h2">
           Prepare-se<br>para cruzar<br>a linha.
         </h2>
         <div class="reveal d2">
-          <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
+          <a href="https://wa.me/5541984299805" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" data-i18n-html="contact.cta">
             Falar com a gente &nbsp;→
           </a>
         </div>
@@ -1105,6 +1221,173 @@
 
 
   <script>
+    /* ─ Translations ─ */
+    var T = {
+      pt: {
+        'nav.quemsomos': 'Quem somos',
+        'nav.fazemos':   'O que fazemos',
+        'nav.cases':     'Cases',
+        'nav.equipe':    'Equipe',
+        'nav.cta':       'Fale com a gente',
+        'hero.h1':       'Do detalhe<br>que ninguém vê<br>ao momento<br>que ninguém esquece.',
+        'hero.tagline':  'Para cruzar a fronteira do óbvio.',
+        'hero.cta':      'Cruzar a linha &nbsp;→',
+        'hero.scroll':   'Rolar',
+        'qs.label': 'Quem somos',
+        'qs.h2':    'Para trazer uma nova visão ao mercado de live marketing.',
+        'qs.body':  '<p>A Trópico nasceu de uma conversa — e da certeza de que evento não precisa ser sinônimo de dor de cabeça.</p><p>Ao longo de anos de experiência no universo de eventos corporativos e live marketing, identificamos o que faz a diferença entre um projeto que apenas acontece e um projeto que <strong>deixa marca</strong>.</p><p>Para nós, <strong>a criatividade é o pontapé inicial</strong>. Mas organização, transparência, respeito e ética de trabalho são os pilares que mantêm essa força criativa firme até a execução.</p><p>Planejamos e produzimos projetos de todos os portes — de ativações e experiências imersivas a grandes eventos corporativos — com suporte completo do início ao fim.</p>',
+        'qs.cta':   'Conte conosco',
+        'svc.label': 'O que fazemos',
+        'svc.h2':    'Três frentes. Uma única obsessão pelo inusitado.',
+        'svc.intro': 'Não produzimos eventos. Construímos os segundos que as pessoas vão querer contar depois.',
+        'svc1.title': 'Eventos',
+        'svc1.body':  'Corporativos, culturais, congressos e shows. Do briefing ao encerramento, com presença em cada detalhe que muda o resultado.',
+        'svc1.link':  'Falar sobre um projeto',
+        'svc2.title': 'Experiências',
+        'svc2.body':  'Ativações, lançamentos, imersões. Criamos percursos sensoriais que transformam presença em memória afetiva.',
+        'svc2.link':  'Falar sobre um projeto',
+        'svc3.title': 'Audiovisual',
+        'svc3.body':  'Captação, transmissão ao vivo, cobertura e criação de conteúdo. Para quem entende que a câmera também tem ponto de vista.',
+        'svc3.link':  'Falar sobre um projeto',
+        'cases.label': 'Cases',
+        'cases.h2':    'Projetos que ficaram<br>na memória.',
+        'test.label':  'O que dizem',
+        'test1.quote': '“Passando pra registrar meu agradecimento pela parceria nesse evento tão importante pra nós. <strong>Que bom ter seguido minha intuição e apostado na Trópico.</strong> Aproveitem o descanso e voltem com a energia renovada porque o Top de Vendas 2026 já tá ON!”',
+        'test2.quote': '“Conseguimos <strong>elevar muito o nível do nosso evento</strong> por conta da Trópico. Toda vez que eu trago alguma ideia, que normalmente não é nada comum ou convencional, eles topam na hora e me ajudam a executar. Essa parceria com certeza vai ser muito duradoura.”',
+        'team.label': 'Equipe',
+        'team.h2':    'As pessoas por trás<br>de cada detalhe.',
+        'partner1.role': 'Produtor · DJ · Curador Musical',
+        'partner1.bio':  'Produtor de eventos, DJ e curador musical com 16 anos de experiência em festas, shows e festivais. Lidera há 5 anos a abertura do Festival de Teatro de Curitiba. No portfólio, destacam-se Gastronomix, Feira Mia Cara e Virada Paradisíaca, além de eventos corporativos e experiências imersivas.',
+        'partner2.role': 'Produtor · Diretor Artístico',
+        'partner2.bio':  'Produtor e diretor artístico com formações em Relações Públicas (UFPR), Cinema (PUC-PR) e Gestão de Entretenimento (PUC-Rio). Especialista em eventos corporativos e experiências de marca, do planejamento à execução. Desde 2024, atua exclusivamente no planejamento, direção artística e gestão de projetos.',
+        'team.strip': 'Bastidores',
+        'contact.label': 'Contato',
+        'contact.h2':    'Prepare-se<br>para cruzar<br>a linha.',
+        'contact.cta':   'Falar com a gente &nbsp;→'
+      },
+      en: {
+        'nav.quemsomos': 'Who we are',
+        'nav.fazemos':   'What we do',
+        'nav.cases':     'Cases',
+        'nav.equipe':    'Team',
+        'nav.cta':       'Talk to us',
+        'hero.h1':       'From the detail<br>no one sees<br>to the moment<br>no one forgets.',
+        'hero.tagline':  'To cross the border of the obvious.',
+        'hero.cta':      'Cross the line &nbsp;→',
+        'hero.scroll':   'Scroll',
+        'qs.label': 'Who we are',
+        'qs.h2':    'To bring a new vision to the live marketing industry.',
+        'qs.body':  '<p>Trópico was born from a conversation — and the certainty that events don\'t have to be synonymous with headaches.</p><p>Over years of experience in the world of corporate events and live marketing, we identified what makes the difference between a project that merely happens and one that <strong>leaves a mark</strong>.</p><p>For us, <strong>creativity is the starting point</strong>. But organization, transparency, respect and work ethics are the pillars that keep that creative drive steady all the way to execution.</p><p>We plan and produce projects of all sizes — from activations and immersive experiences to large-scale corporate events — with full support from start to finish.</p>',
+        'qs.cta':   'Count on us',
+        'svc.label': 'What we do',
+        'svc.h2':    'Three fronts. One single obsession with the unusual.',
+        'svc.intro': 'We don\'t produce events. We build the seconds people will want to talk about later.',
+        'svc1.title': 'Events',
+        'svc1.body':  'Corporate, cultural, conferences and shows. From briefing to closing, present in every detail that changes the outcome.',
+        'svc1.link':  'Talk about a project',
+        'svc2.title': 'Experiences',
+        'svc2.body':  'Activations, launches, immersive experiences. We create sensory journeys that transform presence into emotional memory.',
+        'svc2.link':  'Talk about a project',
+        'svc3.title': 'Audiovisual',
+        'svc3.body':  'Capture, live streaming, coverage and content creation. For those who understand that the camera also has a point of view.',
+        'svc3.link':  'Talk about a project',
+        'cases.label': 'Cases',
+        'cases.h2':    'Projects that stayed<br>in memory.',
+        'test.label':  'What they say',
+        'test1.quote': '“Writing to register my gratitude for the partnership in this event so important to us. <strong>How good it was to follow my intuition and bet on Trópico.</strong> Enjoy your rest and come back with renewed energy — the 2026 Sales Top is already ON!”',
+        'test2.quote': '“We managed to <strong>greatly elevate the level of our event</strong> thanks to Trópico. Every time I bring an idea — usually nothing common or conventional — they accept it right away and help me execute it. This partnership will certainly be a very long one.”',
+        'team.label': 'Team',
+        'team.h2':    'The people behind<br>every detail.',
+        'partner1.role': 'Producer · DJ · Music Curator',
+        'partner1.bio':  'Event producer, DJ and music curator with 16 years of experience in parties, shows and festivals. For 5 years he has led the opening of the Curitiba Theater Festival. Portfolio highlights include Gastronomix, Feira Mia Cara and Virada Paradisíaca, alongside corporate events and immersive experiences.',
+        'partner2.role': 'Producer · Artistic Director',
+        'partner2.bio':  'Producer and artistic director with degrees in Public Relations (UFPR), Cinema (PUC-PR) and Entertainment Management (PUC-Rio). Specialist in corporate events and brand experiences, from planning to execution. Since 2024, works exclusively in planning, artistic direction and project management.',
+        'team.strip': 'Behind the scenes',
+        'contact.label': 'Contact',
+        'contact.h2':    'Get ready<br>to cross<br>the line.',
+        'contact.cta':   'Talk to us &nbsp;→'
+      },
+      es: {
+        'nav.quemsomos': 'Quiénes somos',
+        'nav.fazemos':   'Lo que hacemos',
+        'nav.cases':     'Cases',
+        'nav.equipe':    'Equipo',
+        'nav.cta':       'Hablemos',
+        'hero.h1':       'Del detalle<br>que nadie ve<br>al momento<br>que nadie olvida.',
+        'hero.tagline':  'Para cruzar la frontera de lo obvio.',
+        'hero.cta':      'Cruzar la línea &nbsp;→',
+        'hero.scroll':   'Deslizar',
+        'qs.label': 'Quiénes somos',
+        'qs.h2':    'Para traer una nueva visión al mercado del live marketing.',
+        'qs.body':  '<p>Trópico nació de una conversación — y de la certeza de que un evento no tiene por qué ser sinónimo de dolor de cabeza.</p><p>A lo largo de años de experiencia en el universo de los eventos corporativos y el live marketing, identificamos lo que marca la diferencia entre un proyecto que simplemente ocurre y uno que <strong>deja huella</strong>.</p><p>Para nosotros, <strong>la creatividad es el puntapié inicial</strong>. Pero la organización, la transparencia, el respeto y la ética de trabajo son los pilares que mantienen esa fuerza creativa firme hasta la ejecución.</p><p>Planificamos y producimos proyectos de todos los tamaños — desde activaciones y experiencias inmersivas hasta grandes eventos corporativos — con soporte completo de principio a fin.</p>',
+        'qs.cta':   'Cuenten con nosotros',
+        'svc.label': 'Lo que hacemos',
+        'svc.h2':    'Tres frentes. Una única obsesión por lo inusitado.',
+        'svc.intro': 'No producimos eventos. Construimos los segundos que la gente querrá contar después.',
+        'svc1.title': 'Eventos',
+        'svc1.body':  'Corporativos, culturales, congresos y shows. Del briefing al cierre, presentes en cada detalle que cambia el resultado.',
+        'svc1.link':  'Hablar de un proyecto',
+        'svc2.title': 'Experiencias',
+        'svc2.body':  'Activaciones, lanzamientos, inmersiones. Creamos recorridos sensoriales que transforman la presencia en memoria afectiva.',
+        'svc2.link':  'Hablar de un proyecto',
+        'svc3.title': 'Audiovisual',
+        'svc3.body':  'Captación, transmisión en vivo, cobertura y creación de contenido. Para quienes entienden que la cámara también tiene punto de vista.',
+        'svc3.link':  'Hablar de un proyecto',
+        'cases.label': 'Cases',
+        'cases.h2':    'Proyectos que quedaron<br>en la memoria.',
+        'test.label':  'Lo que dicen',
+        'test1.quote': '“Paso a registrar mi agradecimiento por la alianza en este evento tan importante para nosotros. <strong>Qué bueno haber seguido mi intuición y apostado por Trópico.</strong> Disfruten el descanso y vuelvan con la energía renovada — ¡el Top de Ventas 2026 ya está ON!”',
+        'test2.quote': '“Logramos <strong>elevar enormemente el nivel de nuestro evento</strong> gracias a Trópico. Cada vez que traigo una idea — generalmente nada común ni convencional — la aceptan de inmediato y me ayudan a ejecutarla. Esta alianza sin duda será muy duradera.”',
+        'team.label': 'Equipo',
+        'team.h2':    'Las personas detrás<br>de cada detalle.',
+        'partner1.role': 'Productor · DJ · Curador Musical',
+        'partner1.bio':  'Productor de eventos, DJ y curador musical con 16 años de experiencia en fiestas, shows y festivales. Desde hace 5 años lidera la apertura del Festival de Teatro de Curitiba. En su portafolio destacan Gastronomix, Feira Mia Cara y Virada Paradisíaca, además de eventos corporativos y experiencias inmersivas.',
+        'partner2.role': 'Productor · Director Artístico',
+        'partner2.bio':  'Productor y director artístico con formación en Relaciones Públicas (UFPR), Cine (PUC-PR) y Gestión del Entretenimiento (PUC-Rio). Especialista en eventos corporativos y experiencias de marca, desde la planificación hasta la ejecución. Desde 2024, trabaja exclusivamente en planificación, dirección artística y gestión de proyectos.',
+        'team.strip': 'Bastidores',
+        'contact.label': 'Contacto',
+        'contact.h2':    'Prepárate<br>para cruzar<br>la línea.',
+        'contact.cta':   'Hablemos &nbsp;→'
+      }
+    };
+
+    /* ─ i18n engine ─ */
+    (function () {
+      var supported = ['pt', 'en', 'es'];
+
+      function setLang(lang) {
+        if (supported.indexOf(lang) === -1) lang = 'pt';
+        var dict = T[lang];
+
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+          var v = dict[el.getAttribute('data-i18n')];
+          if (v !== undefined) el.textContent = v;
+        });
+
+        document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+          var v = dict[el.getAttribute('data-i18n-html')];
+          if (v !== undefined) el.innerHTML = v;
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+          btn.classList.toggle('lang-btn--active', btn.getAttribute('data-lang') === lang);
+        });
+
+        document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt-BR' : lang);
+        try { localStorage.setItem('tropico-lang', lang); } catch (e) {}
+      }
+
+      var saved = '';
+      try { saved = localStorage.getItem('tropico-lang') || ''; } catch (e) {}
+      var init = supported.indexOf(saved) !== -1 ? saved : 'pt';
+
+      setLang(init);
+
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () { setLang(btn.getAttribute('data-lang')); });
+      });
+    }());
+
     /* ─ Nav scroll ─ */
     (function () {
       var nav = document.getElementById('main-nav');
